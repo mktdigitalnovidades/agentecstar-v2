@@ -123,7 +123,7 @@ const UseCases = () => {
               {useCases.map((useCase, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div 
-                    className="relative group overflow-hidden rounded-2xl w-full h-[450px] cursor-pointer transition-transform duration-500 hover:-translate-y-2 border border-slate-700/50 hover:border-transparent" 
+                    className="relative group overflow-hidden rounded-2xl w-full h-[380px] md:h-[450px] cursor-pointer transition-transform duration-500 hover:-translate-y-2 border border-slate-700/50 hover:border-transparent" 
                     style={{
                       boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
                     }}
@@ -148,19 +148,19 @@ const UseCases = () => {
 
                     {/* Estado Normal (Ícone e Título grandes no centro/fundo) */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-6 transition-all duration-700 group-hover:-translate-y-full group-hover:opacity-0">
-                      <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 bg-black/40 backdrop-blur-md border border-white/10" style={{ boxShadow: `0 0 30px ${useCase.color}40` }}>
-                        <useCase.icon className="h-10 w-10" style={{ color: useCase.color }} />
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-4 bg-black/40 backdrop-blur-md border border-white/10" style={{ boxShadow: `0 0 30px ${useCase.color}40` }}>
+                        <useCase.icon className="h-8 w-8 md:h-10 md:w-10" style={{ color: useCase.color }} />
                       </div>
-                      <h3 className="text-3xl font-bold text-white tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{useCase.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{useCase.title}</h3>
                     </div>
 
                     {/* Estado Hover (Texto e Features que aparecem subindo) */}
                     <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-12 group-hover:translate-y-0">
-                      <useCase.icon className="h-8 w-8 mb-4 drop-shadow-lg" style={{ color: useCase.color }} />
-                      <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">{useCase.title}</h3>
-                      <p className="text-slate-200 mb-6 text-sm leading-relaxed drop-shadow-md">{useCase.description}</p>
+                      <useCase.icon className="h-6 w-6 md:h-8 md:w-8 mb-2 md:mb-4 drop-shadow-lg" style={{ color: useCase.color }} />
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3 tracking-wide text-center">{useCase.title}</h3>
+                      <p className="text-slate-200 mb-4 md:mb-6 text-xs md:text-sm leading-relaxed drop-shadow-md line-clamp-3">{useCase.description}</p>
                       
-                      <div className="w-full flex flex-col gap-2">
+                      <div className="w-full flex flex-col gap-1.5 md:gap-2">
                         {useCase.features.map((feature, idx) => (
                           <div key={idx} className="text-xs font-medium text-white bg-white/10 backdrop-blur-md rounded-lg py-2 px-3 border border-white/20 shadow-sm flex items-center justify-center gap-2">
                              <div className="w-1.5 h-1.5 rounded-full" style={{ background: useCase.color, boxShadow: `0 0 5px ${useCase.color}` }}></div>

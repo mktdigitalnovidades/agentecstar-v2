@@ -37,14 +37,14 @@ const HowItWorks = () => {
         </div>
 
         {/* Bloco principal */}
-        <div className="max-w-3xl mx-auto mb-16 p-8 rounded-2xl" style={{
+        <div className="max-w-3xl mx-auto mb-12 md:mb-16 p-5 md:p-8 rounded-2xl" style={{
           background: 'rgba(30,41,59,0.6)',
           backdropFilter: 'blur(12px)',
           border: '1px solid rgba(62,206,208,0.2)',
           boxShadow: '0 0 40px rgba(62,206,208,0.08)',
         }}>
-          <h3 className="text-2xl font-bold text-white text-center mb-3">Inteligência Artificial Personalizada</h3>
-          <p className="text-center leading-relaxed" style={{ color: '#94A3B8' }}>
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-3">Inteligência Artificial Personalizada</h3>
+          <p className="text-center text-sm md:text-base leading-relaxed" style={{ color: '#94A3B8' }}>
             Nossos agentes são treinados com as informações da sua empresa e passam a responder clientes de forma personalizada, com agilidade e no seu tom de voz.
           </p>
         </div>

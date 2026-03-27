@@ -68,12 +68,12 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto space-y-4">
           <Accordion type="single" collapsible className="w-full flex flex-col gap-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-0 rounded-2xl px-6 py-2 transition-all duration-300" 
+              <AccordionItem key={index} value={`item-${index}`} className="border-0 rounded-2xl px-4 md:px-6 py-2 transition-all duration-300" 
                 style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid rgba(62,206,208,0.15)' }}>
-                <AccordionTrigger className="text-left text-lg font-bold text-white hover:text-brand-cyan hover:no-underline [&[data-state=open]]:text-brand-fuchsia">
+                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-white hover:text-brand-cyan hover:no-underline [&[data-state=open]]:text-brand-fuchsia">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-300 text-base leading-relaxed pb-4">
+                <AccordionContent className="text-slate-300 text-sm md:text-base leading-relaxed pb-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

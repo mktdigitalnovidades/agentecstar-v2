@@ -39,30 +39,30 @@ const Hero = () => {
               Agentes inteligentes que atendem seus clientes 24/7, qualificam leads automaticamente e integram seus sistemas — para empresas em <strong>Campinas e toda a Grande SP</strong>.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" onClick={() => window.open(whatsappLink, '_blank')} className="bg-gradient-to-r from-brand-accent to-brand-purple hover:from-brand-purple hover:to-brand-blue text-white px-8 py-6 text-lg font-semibold shadow-2xl hover:shadow-brand-accent/25 transition-all duration-500 transform hover:scale-105 group">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
+              <Button size="lg" onClick={() => window.open(whatsappLink, '_blank')} className="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-purple hover:from-brand-purple hover:to-brand-blue text-white px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold shadow-2xl hover:shadow-brand-accent/25 transition-all duration-500 transform hover:scale-105 group">
                 <MessageCircle className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Agende uma consulta gratuita
+                Agende uma consulta
               </Button>
               <Button size="lg" variant="outline" onClick={() => document.getElementById('services')?.scrollIntoView({
               behavior: 'smooth'
-            })} className="border-2 border-white/30 backdrop-blur-sm px-8 py-6 text-lg font-semibold transition-all duration-300 hover:border-brand-accent text-sky-50 bg-indigo-600 hover:bg-indigo-500">
+            })} className="w-full sm:w-auto border-2 border-white/30 backdrop-blur-sm px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold transition-all duration-300 hover:border-brand-accent text-sky-50 bg-indigo-600/30 hover:bg-indigo-500/50">
                 Saiba mais
               </Button>
             </div>
 
-            <div className="flex items-center space-x-1 pt-1">
-              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Bot className="h-6 w-6 text-brand-accent" />
-                <span className="text-sm font-medium">IA Avançada</span>
+            <div className="flex flex-wrap items-center gap-2 pt-4">
+              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                <Bot className="h-4 w-4 md:h-5 md:w-5 text-brand-accent" />
+                <span className="text-xs md:text-sm font-medium text-white">IA Avançada</span>
               </div>
-              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <MessageCircle className="h-6 w-6 text-brand-accent" />
-                <span className="text-sm font-medium">WhatsApp & Insta</span>
+              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                <MessageCircle className="h-4 w-4 md:h-5 md:w-5 text-brand-accent" />
+                <span className="text-xs md:text-sm font-medium text-white">Wa / Insta</span>
               </div>
-              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Zap className="h-6 w-6 text-brand-accent" />
-                <span className="text-sm font-medium">24/7</span>
+              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                <Zap className="h-4 w-4 md:h-5 md:w-5 text-brand-accent" />
+                <span className="text-xs md:text-sm font-medium text-white">24/7</span>
               </div>
             </div>
           </div>
