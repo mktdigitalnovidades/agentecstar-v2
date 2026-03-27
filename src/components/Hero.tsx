@@ -21,22 +21,22 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2 mb-4">
                 <Sparkles className="h-6 w-6 text-brand-accent animate-pulse" />
-                <span className="text-brand-accent font-medium uppercase tracking-wider text-sm">Inovação em IA</span>
+                <span className="text-brand-accent font-medium uppercase tracking-wider text-sm">Automação com IA • Campinas, SP</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 <span className="text-gradient bg-gradient-to-r from-white via-brand-accent to-white bg-clip-text text-transparent">
-                  AgentECStar
+                  AgentecStar
                 </span>
                 <br />
                 <span className="text-2xl md:text-4xl bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent">
-                  Automação com Inteligência Artificial
+                  Automatize Seu Negócio com Agentes de IA em Campinas
                 </span>
               </h1>
             </div>
             
             <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-              Transforme o atendimento da sua empresa com automações inteligentes no WhatsApp e Instagram usando IA de última geração.
+              Agentes inteligentes que atendem seus clientes 24/7, qualificam leads automaticamente e integram seus sistemas — para empresas em <strong>Campinas e toda a Grande SP</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -78,7 +78,7 @@ const Hero = () => {
                       <Bot className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-semibold">AgentECStar IA</p>
+                      <p className="text-white font-semibold">AgentecStar IA</p>
                       <p className="text-gray-300 text-sm">Online agora</p>
                     </div>
                   </div>

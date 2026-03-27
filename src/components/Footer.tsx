@@ -12,22 +12,22 @@ const Footer = () => {
                 <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="text-2xl font-bold text-gradient bg-gradient-to-r from-white to-brand-pink bg-clip-text text-transparent">
-                AgentECStar
+                AgentecStar
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Transformamos o atendimento das empresas com automação inteligente e chatbots avançados.
+              Automação com IA e agentes inteligentes para empresas em Campinas-SP e toda a Grande São Paulo.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Automação com IA</li>
+              <li>Agentes de IA</li>
+              <li>Automação de Atendimento</li>
               <li>Chatbots WhatsApp</li>
-              <li>Chatbots Instagram</li>
+              <li>Integração com n8n</li>
               <li>Qualificação de Leads</li>
-              <li>Atendimento 24/7</li>
             </ul>
           </div>
 
@@ -43,7 +43,11 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} AgentECStar. Todos os direitos reservados.
+            © {currentYear} AgentecStar. Todos os direitos reservados.
+          </p>
+          {/* Texto de cobertura regional – relevante para SEO local */}
+          <p className="text-gray-600 text-xs mt-2">
+            Atendemos empresas em Campinas, Jundiaí, Valinhos, Vinhedo, Hortolândia, Sumaré e Grande SP.
           </p>
         </div>
       </div>

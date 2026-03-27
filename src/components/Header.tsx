@@ -23,7 +23,7 @@ const Header = () => {
           <div className="relative">
             <img 
               src="/lovable-uploads/873842a4-a98f-4466-8075-856960284ae0.png" 
-              alt="AgentECStar Logo" 
+              alt="AgentecStar Logo" 
               className="h-8 sm:h-10 lg:h-12 w-auto" 
             />
             <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/20 to-brand-blue/20 rounded-lg blur-xl"></div>

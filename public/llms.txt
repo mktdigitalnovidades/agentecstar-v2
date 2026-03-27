@@ -1,0 +1,28 @@
+# AgentecStar
+
+> Empresa de Automação com Inteligência Artificial e Agentes Inteligentes, sediada em Campinas, São Paulo, Brasil.
+
+## Serviços
+
+- Agentes de IA para atendimento automatizado (WhatsApp, Instagram, Telegram)
+- Chatbots inteligentes com IA generativa
+- Automação de processos com n8n e integração de sistemas
+- Qualificação automática de leads
+- Atendimento 24 horas por dia, 7 dias por semana
+
+## Localização e Área de Atendimento
+
+- Localização principal: Campinas, SP, Brasil
+- Atende: Campinas, Jundiaí, Valinhos, Vinhedo, Hortolândia, Sumaré, Paulínia e Grande São Paulo
+- Atendimento remoto para todo o Brasil
+
+## Contato
+
+- WhatsApp: +55 19 99228-8312
+- Site: https://AgentecStar.com.br
+
+## Perguntas Frequentes
+
+- O que é automação com IA para empresas? → Uso de inteligência artificial para automatizar tarefas repetitivas como atendimento ao cliente, qualificação de leads e respostas a perguntas frequentes.
+- Como funciona um agente de IA no WhatsApp? → Um agente de IA é integrado ao WhatsApp Business API e responde automaticamente às mensagens dos clientes, 24 horas por dia.
+- Quanto custa implantar automação com IA em Campinas? → Os planos variam conforme o volume de atendimentos e complexidade. Entre em contato para um orçamento personalizado.

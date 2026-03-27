@@ -21,7 +21,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      text: "Com a AgentECStar conseguimos organizar os atendimentos e agendamentos com muito mais eficiência.",
+      text: "Com a AgentecStar conseguimos organizar os atendimentos e agendamentos com muito mais eficiência.",
       author: "AutoCenter SP",
       rating: 5
     },

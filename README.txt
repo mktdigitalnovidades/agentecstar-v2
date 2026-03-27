@@ -1,4 +1,4 @@
-=== AgentECStar ===
+=== AgentecStar ===
 
 Contributors: agentestar
 Tags: one-page, business, responsive, ai, automation, dark, gradients
@@ -13,7 +13,7 @@ Modern one-page WordPress theme for AI automation services with beautiful gradie
 
 == Description ==
 
-AgentECStar is a modern, one-page WordPress theme designed specifically for AI automation and technology services. The theme features:
+AgentecStar is a modern, one-page WordPress theme designed specifically for AI automation and technology services. The theme features:
 
 * Beautiful gradient backgrounds with brand colors
 * Responsive design that works on all devices
