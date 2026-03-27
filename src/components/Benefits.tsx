@@ -1,94 +1,94 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Clock, Heart, Sparkles } from "lucide-react";
+
+import { TrendingUp, Clock, Heart, Sparkles, Zap } from "lucide-react";
+
 const Benefits = () => {
-  const benefits = [{
-    icon: TrendingUp,
-    title: "Aumente seu faturamento com menos esforço",
-    description: "Converta mais leads em vendas com atendimento automatizado e personalizado",
-    gradient: "from-emerald-500 to-teal-600",
-    bgGradient: "from-emerald-50 to-teal-50"
-  }, {
-    icon: Clock,
-    title: "Economize tempo da equipe com respostas inteligentes",
-    description: "Libere sua equipe para focar no que realmente importa enquanto a IA cuida do atendimento básico",
-    gradient: "from-blue-500 to-indigo-600",
-    bgGradient: "from-blue-50 to-indigo-50"
-  }, {
-    icon: Heart,
-    title: "Crie experiências mais satisfatórias para os seus clientes",
-    description: "Atendimento rápido, preciso e disponível 24 horas por dia, 7 dias por semana",
-    gradient: "from-pink-500 to-rose-600",
-    bgGradient: "from-pink-50 to-rose-50"
-  }];
-  return <section id="benefits" className="py-20 bg-white relative overflow-hidden">
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-brand-purple/10 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-brand-pink/10 rounded-full blur-xl animate-pulse"></div>
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Aumente seu faturamento com menos esforço",
+      description: "Converta mais leads em vendas com atendimento automatizado e personalizado, disponível 24 horas por dia.",
+      color: '#3ECED0',
+      glow: 'rgba(62,206,208,0.25)',
+    },
+    {
+      icon: Clock,
+      title: "Economize tempo da equipe com respostas inteligentes",
+      description: "Libere sua equipe para focar no que importa enquanto a IA cuida do atendimento básico e repetitivo.",
+      color: '#D946EF',
+      glow: 'rgba(217,70,239,0.25)',
+    },
+    {
+      icon: Heart,
+      title: "Crie experiências mais satisfatórias para seus clientes",
+      description: "Atendimento rápido, preciso e disponível 24h por dia, 7 dias por semana — sem fila, sem espera.",
+      color: '#542FA3',
+      glow: 'rgba(84,47,163,0.25)',
+    },
+  ];
+
+  const stats = [
+    { value: '+300%', label: 'Aumento na conversão', color: '#3ECED0' },
+    { value: '24/7',  label: 'Atendimento contínuo',   color: '#D946EF' },
+    { value: '-80%',  label: 'Redução no tempo de resposta', color: '#542FA3' },
+  ];
+
+  return (
+    <section id="benefits" className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #1E293B 0%, #0F172A 100%)' }}>
+      {/* Orbs */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(62,206,208,0.08) 0%, transparent 70%)' }} />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,47,163,0.1) 0%, transparent 70%)' }} />
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Sparkles className="h-6 w-6 text-brand-purple animate-pulse" />
-            <span className="text-brand-purple font-medium uppercase tracking-wider text-sm">Vantagens</span>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Sparkles className="h-5 w-5 animate-pulse" style={{ color: '#3ECED0' }} />
+            <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: '#3ECED0' }}>Vantagens</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Benefícios da <span className="text-gradient bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Automação com IA</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Benefícios da <span className="text-gradient-cyber">Automação com IA</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Descubra como nossa tecnologia pode revolucionar o atendimento da sua empresa
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
+            Descubra como nossa tecnologia pode revolucionar o atendimento da sua empresa em Campinas
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => <Card key={index} className="group text-center hover:shadow-2xl transition-all duration-500 border-0 shadow-lg relative overflow-hidden bg-white">
-              {/* Animated Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${benefit.bgGradient} opacity-0 group-hover:opacity-100 transition-all duration-500`}></div>
-              
-              <CardHeader className="relative pb-4">
-                <div className="relative mb-6">
-                  <div className={`w-24 h-24 bg-gradient-to-r ${benefit.gradient} rounded-3xl flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-2xl relative overflow-hidden`}>
-                    <benefit.icon className="h-12 w-12 text-white relative z-10" />
-                    {/* Shimmer Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl text-gray-900 leading-tight relative group-hover:text-brand-purple transition-colors duration-300">
-                  {benefit.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="relative">
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {benefit.description}
-                </p>
-              </CardContent>
-
-              {/* Hover Border Effect */}
-              <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${benefit.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none`}></div>
-            </Card>)}
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {benefits.map((b, i) => (
+            <div
+              key={i}
+              className="group p-6 rounded-2xl transition-all duration-500 hover:-translate-y-2"
+              style={{
+                background: 'rgba(30,41,59,0.6)',
+                backdropFilter: 'blur(12px)',
+                border: `1px solid ${b.color}22`,
+                boxShadow: `0 4px 24px rgba(0,0,0,0.2)`,
+              }}
+              onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 30px ${b.glow}, 0 4px 24px rgba(0,0,0,0.3)`)}
+              onMouseLeave={e => (e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.2)')}
+            >
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110" style={{ background: `${b.color}22`, border: `1px solid ${b.color}44` }}>
+                <b.icon className="h-7 w-7" style={{ color: b.color }} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3 leading-snug">{b.title}</h3>
+              <p className="leading-relaxed text-sm" style={{ color: '#94A3B8' }}>{b.description}</p>
+            </div>
+          ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8 text-center">
-          <div className="group">
-            <div className="bg-gradient-to-r from-brand-purple to-brand-blue rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-cyan-600">
-              <div className="text-4xl font-bold mb-2">+300%</div>
-              <div className="text-brand-pink font-medium">Aumento na conversão</div>
+        {/* Stats */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {stats.map((s, i) => (
+            <div key={i} className="text-center p-6 rounded-2xl" style={{ background: `${s.color}14`, border: `1px solid ${s.color}33` }}>
+              <div className="text-4xl font-black mb-2" style={{ color: s.color }}>{s.value}</div>
+              <div className="text-sm font-medium" style={{ color: '#CBD5E1' }}>{s.label}</div>
             </div>
-          </div>
-          <div className="group">
-            <div className="bg-gradient-to-r from-brand-blue to-brand-pink rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-cyan-600">
-              <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100 font-medium">Atendimento contínuo</div>
-            </div>
-          </div>
-          <div className="group">
-            <div className="bg-gradient-to-r from-brand-pink to-brand-purple p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-cyan-600 rounded-2xl">
-              <div className="text-4xl font-bold mb-2">-80%</div>
-              <div className="text-purple-100 font-medium">Redução no tempo de resposta</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Benefits;

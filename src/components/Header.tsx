@@ -17,8 +17,14 @@ const Header = () => {
   const whatsappLink = "https://wa.me/5519992288312?text=Olá! Gostaria de saber mais sobre automação com IA para minha empresa.";
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-white/20 z-50 shadow-lg">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between bg-[#190c59]">
+    <header className="fixed top-0 w-full z-50" style={{
+      background: 'rgba(15,23,42,0.85)',
+      backdropFilter: 'blur(20px)',
+      WebkitBackdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(62,206,208,0.15)',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
+    }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2 sm:space-x-3">
           <div className="relative">
             <img 
