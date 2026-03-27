@@ -94,14 +94,14 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-24" style={{ background: 'linear-gradient(180deg, #1E293B 0%, #0F172A 100%)' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Depoimentos
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Veja o que nossos clientes dizem sobre nossa solução
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
+            Veja o que nossos clientes dizem sobre nossa solução de IA
           </p>
         </div>
 
@@ -121,7 +121,7 @@ const Testimonials = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md h-full">
+                  <Card className="hover:shadow-lg transition-all duration-300 border-0 h-full" style={{ background: 'rgba(30,41,59,0.7)', backdropFilter: 'blur(12px)', border: '1px solid rgba(62,206,208,0.12)' }}>
                     <CardHeader>
                       <div className="flex space-x-1 mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -130,10 +130,10 @@ const Testimonials = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <blockquote className="text-lg text-gray-700 mb-4 italic">
+                      <blockquote className="text-base mb-4 italic leading-relaxed" style={{ color: '#CBD5E1' }}>
                         "{testimonial.text}"
                       </blockquote>
-                      <cite className="text-brand-purple font-semibold">
+                      <cite className="font-semibold" style={{ color: '#3ECED0' }}>
                         – {testimonial.author}
                       </cite>
                     </CardContent>

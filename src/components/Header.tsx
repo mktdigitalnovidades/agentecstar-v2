@@ -26,13 +26,12 @@ const Header = () => {
     }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2 sm:space-x-3">
-          <div className="relative">
+          <div className="relative flex items-center">
             <img 
-              src="/lovable-uploads/873842a4-a98f-4466-8075-856960284ae0.png" 
+              src="/agentecstar-logo.png" 
               alt="AgentecStar Logo" 
-              className="h-8 sm:h-10 lg:h-12 w-auto" 
+              className="h-10 sm:h-12 lg:h-14 w-auto relative z-10 drop-shadow-[0_0_15px_rgba(62,206,208,0.3)]" 
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/20 to-brand-blue/20 rounded-lg blur-xl"></div>
           </div>
         </div>
 
