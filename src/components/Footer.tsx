@@ -1,6 +1,9 @@
 
+import { Link, useNavigate } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   return (
     <footer className="py-12 bg-brand-dark text-white">
@@ -8,7 +11,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="relative flex items-center group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+              <div className="relative flex items-center group cursor-pointer" onClick={() => { window.scrollTo({top: 0, behavior: 'smooth'}); navigate('/'); }}>
                 <img 
                   src="/agentecstar-icon.png" 
                   alt="AgentecStar Icon" 
@@ -45,14 +48,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center flex flex-col items-center gap-2">
           <p className="text-gray-400">
             © {currentYear} AgentecStar. Todos os direitos reservados.
           </p>
           {/* Texto de cobertura regional – relevante para SEO local */}
-          <p className="text-gray-600 text-xs mt-2">
-            Atendemos empresas em Campinas, Jundiaí, Valinhos, Vinhedo, Hortolândia, Sumaré e Grande SP.
+          <p className="text-gray-600 text-xs mt-2 max-w-lg mx-auto leading-relaxed">
+            Atendemos empresas em Campinas, Jundiaí, Valinhos, Vinhedo, Hortolândia, Sumaré, Grande SP e todo o Brasil.
           </p>
+          <div className="mt-4 border-t border-gray-800 pt-4 w-full flex justify-center gap-6">
+             <Link to="/mapa-do-site" className="text-sm font-medium text-brand-cyan hover:underline transition-all">
+                Mapa do Site
+             </Link>
+             <a href="#" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Política de Privacidade
+             </a>
+          </div>
         </div>
       </div>
     </footer>
