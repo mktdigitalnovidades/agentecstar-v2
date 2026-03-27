@@ -18,42 +18,50 @@ const Testimonials = () => {
     {
       text: "Depois da automação com IA, nosso atendimento ficou muito mais rápido. Nossos clientes elogiaram a agilidade!",
       author: "Clínica Vital",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=32"
     },
     {
       text: "Com a AgentecStar conseguimos organizar os atendimentos e agendamentos com muito mais eficiência.",
       author: "AutoCenter SP",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=11"
     },
     {
       text: "A automação revolucionou nosso processo de vendas. Conseguimos atender 3x mais clientes no mesmo tempo.",
       author: "Loja Fashion",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=5"
     },
     {
       text: "Nossos agendamentos nunca mais ficaram desorganizados. O sistema é incrível e muito fácil de usar.",
       author: "Salão Beauty",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=9"
     },
     {
       text: "Reduzimos o tempo de resposta em 80% e aumentamos a satisfação dos nossos clientes significativamente.",
       author: "Restaurante Gourmet",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=12"
     },
     {
       text: "A integração com WhatsApp foi perfeita. Nossos clientes adoraram a praticidade do atendimento.",
       author: "Academia Fitness",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=33"
     },
     {
       text: "Conseguimos automatizar todo o processo de confirmação de consultas. Economizamos horas de trabalho.",
       author: "Consultório Médico",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=60"
     },
     {
       text: "O ROI foi impressionante. Em 2 meses já tínhamos recuperado o investimento com o aumento de vendas.",
       author: "E-commerce Tech",
-      rating: 5
+      rating: 5,
+      avatar: "https://i.pravatar.cc/150?img=68"
     }
   ];
 
@@ -129,13 +137,20 @@ const Testimonials = () => {
                         ))}
                       </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="pt-0">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <img 
+                          src={testimonial.avatar} 
+                          alt={testimonial.author} 
+                          className="w-12 h-12 rounded-full border border-brand-cyan object-cover shadow-sm grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                        <cite className="font-semibold text-lg not-italic" style={{ color: '#3ECED0' }}>
+                          {testimonial.author}
+                        </cite>
+                      </div>
                       <blockquote className="text-base mb-4 italic leading-relaxed" style={{ color: '#CBD5E1' }}>
                         "{testimonial.text}"
                       </blockquote>
-                      <cite className="font-semibold" style={{ color: '#3ECED0' }}>
-                        – {testimonial.author}
-                      </cite>
                     </CardContent>
                   </Card>
                 </CarouselItem>

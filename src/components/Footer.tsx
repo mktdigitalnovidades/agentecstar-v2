@@ -7,15 +7,19 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="relative flex items-center group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+                <img 
+                  src="/agentecstar-icon.png" 
+                  alt="AgentecStar Icon" 
+                  className="h-10 w-auto relative z-10 transition-transform duration-500 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(62,206,208,0.5)]" 
+                />
+                <span className="ml-3 text-2xl font-black tracking-tighter text-white drop-shadow-md">
+                  Agentec<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-fuchsia">Star</span>
+                </span>
               </div>
-              <span className="text-2xl font-bold text-gradient bg-gradient-to-r from-white to-brand-pink bg-clip-text text-transparent">
-                AgentecStar
-              </span>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed max-w-sm">
               Automação com IA e agentes inteligentes para empresas em Campinas-SP e toda a Grande São Paulo.
             </p>
           </div>
