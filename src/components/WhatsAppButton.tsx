@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
       window.GPTMaker.open();
     } else {
       // Fallback to WhatsApp if widget is not available
-      const whatsappLink = "https://wa.me/5519992288312?text=Olá! Gostaria de saber mais sobre automação com IA.";
+      const whatsappLink = "https://wa.me/5519992288312?text=Olá! Vim do SITE e quero melhorar o atendimento da minha empresa.";
       window.open(whatsappLink, '_blank');
     }
   };

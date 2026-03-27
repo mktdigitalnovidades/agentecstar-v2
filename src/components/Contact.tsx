@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageCircle, Phone } from "lucide-react";
 
 const Contact = () => {
-  const whatsappLink = "https://wa.me/5519992288312?text=Olá! Gostaria de saber mais sobre automação com IA para minha empresa.";
+  const whatsappLink = "https://wa.me/5519992288312?text=Olá! Vim do SITE e quero melhorar o atendimento da minha empresa.";
 
   return (
     <section id="contact" className="py-20 bg-gradient-brand">
