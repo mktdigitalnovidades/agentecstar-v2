@@ -33,6 +33,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        # FTP da Hostinger já começa DENTRO do public_html — usar "./" como destino
-        server-dir: ./
+        # public_html/ é o document root do agentecstar.com na Hostinger
+        server-dir: public_html/
         dangerous-clean-slate: false
