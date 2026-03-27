@@ -33,8 +33,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        # Importante: se a sua conta de FTP apontar direto para a raiz do site, use "./"
-        # Se apontar para a raiz da conta de hospedagem, use "public_html/" (conforme a Hostinger usa por padrão)
-        server-dir: public_html/
-        # A flag abaixo impede que o action delete arquivos que você tem lá que não deveriam (ex: .htaccess)
+        # FTP da Hostinger já começa DENTRO do public_html — usar "./" como destino
+        server-dir: ./
         dangerous-clean-slate: false
