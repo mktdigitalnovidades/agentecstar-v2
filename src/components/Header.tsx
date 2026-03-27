@@ -25,13 +25,18 @@ const Header = () => {
       boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
     }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2 sm:space-x-3">
-          <div className="relative flex items-center">
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="relative flex items-center group cursor-pointer" onClick={() => scrollToSection("hero")}>
+            {/* Imagem do Ícone da Estrela */}
             <img 
-              src="/agentecstar-logo.png" 
-              alt="AgentecStar Logo" 
-              className="h-10 sm:h-12 lg:h-14 w-auto relative z-10 drop-shadow-[0_0_15px_rgba(62,206,208,0.3)]" 
+              src="/agentecstar-icon.png" 
+              alt="AgentecStar Icon" 
+              className="h-10 sm:h-12 w-auto relative z-10 transition-transform duration-500 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(62,206,208,0.5)]" 
             />
+            {/* Lettering Stylizado Neon */}
+            <span className="ml-3 text-xl sm:text-2xl font-black tracking-tighter text-white drop-shadow-md">
+              Agentec<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-fuchsia">Star</span>
+            </span>
           </div>
         </div>
 
