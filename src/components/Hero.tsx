@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Bot, MessageCircle, Zap, Sparkles } from "lucide-react";
 const Hero = () => {
-  const whatsappLink = "https://wa.me/5519992288312?text=Olá! Gostaria de agendar uma consulta gratuita sobre automação com IA.";
+  const whatsappLink = "https://wa.me/5519992288312?text=Olá! Gostaria de agendar uma consultoria gratuita sobre automação com IA.";
   return <section className="relative pt-20 pb-16 min-h-screen bg-gradient-to-br from-brand-dark via-brand-navy to-brand-blue overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
               <Button size="lg" onClick={() => window.open(whatsappLink, '_blank')} className="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-purple hover:from-brand-purple hover:to-brand-blue text-white px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold shadow-2xl hover:shadow-brand-accent/25 transition-all duration-500 transform hover:scale-105 group">
                 <MessageCircle className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Agende uma consulta
+                Agende uma consultoria
               </Button>
               <Button size="lg" variant="outline" onClick={() => document.getElementById('services')?.scrollIntoView({
               behavior: 'smooth'

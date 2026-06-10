@@ -42,12 +42,12 @@ get_header(); ?>
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="<?php echo get_theme_mod('whatsapp_link', 'https://wa.me/5519992288312?text=Olá! Gostaria de agendar uma consulta gratuita sobre automação com IA.'); ?>" 
+                        <a href="<?php echo get_theme_mod('whatsapp_link', 'https://wa.me/5519992288312?text=Olá! Gostaria de agendar uma consultoria gratuita sobre automação com IA.'); ?>" 
                            class="btn btn-primary" target="_blank" rel="noopener">
                             <svg class="icon" style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                             </svg>
-                            <?php echo get_theme_mod('hero_cta_text', 'Agende uma consulta gratuita'); ?>
+                            <?php echo get_theme_mod('hero_cta_text', 'Agende uma consultoria gratuita'); ?>
                         </a>
                         <a href="#services" class="btn btn-outline">
                             <?php echo get_theme_mod('hero_secondary_cta', 'Saiba mais'); ?>

@@ -130,7 +130,7 @@ function agentestar_customize_register($wp_customize) {
 
     // Hero CTA Text
     $wp_customize->add_setting('hero_cta_text', array(
-        'default'           => 'Agende uma consulta gratuita',
+        'default'           => 'Agende uma consultoria gratuita',
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('hero_cta_text', array(
