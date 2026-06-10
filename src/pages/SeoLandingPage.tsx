@@ -3,6 +3,7 @@ import { generateAllRoutes } from "@/utils/seo-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
+import PainPoints from "@/components/PainPoints";
 import Benefits from "@/components/Benefits";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
@@ -60,6 +61,9 @@ const SeoLandingPage = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg mx-auto max-w-5xl">
             {routeData.keyword} <br className="hidden md:block"/>
+            {routeData.segment && (
+              <span className="text-brand-cyan"> para {routeData.segment} </span>
+            )}
             {routeData.city && (
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-fuchsia">
                 em {routeData.city}
@@ -68,7 +72,7 @@ const SeoLandingPage = () => {
           </h1>
 
           <p className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            Soluções completas de automação e integração de Agentes Inteligentes {routeData.city ? `para empresas de ${routeData.city} e região.` : 'para sua empresa escalar.'} Qualifique leads automaticamente e nunca perca vendas.
+            Soluções completas de automação e integração de Agentes Inteligentes {routeData.segment ? `voltadas para atuar em ${routeData.segment}` : ''} {routeData.city ? `em ${routeData.city} e região.` : 'para sua empresa escalar.'} Qualifique leads automaticamente e nunca perca vendas.
           </p>
 
           <div className="flex justify-center mt-6">
@@ -84,9 +88,10 @@ const SeoLandingPage = () => {
       </section>
 
       {/* Renderização de todos os componentes com o mesmo design da Home! */}
+      <PainPoints segment={routeData.segment} />
       <Benefits />
       <Services />
-      <UseCases />
+      <UseCases segment={routeData.segment} />
       <HowItWorks />
       <Testimonials />
       <Contact />

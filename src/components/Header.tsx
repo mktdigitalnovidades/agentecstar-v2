@@ -2,16 +2,36 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({
-      behavior: "smooth"
-    });
     setIsMenuOpen(false);
+    
+    // Tratamento 1: Voltar puramente para Home (Logo)
+    if (sectionId === "hero" && location.pathname !== "/") {
+      navigate("/");
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    // Tratamento 2: Se estamos fora da Home e clicou numa subseção
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+      // Timeout seguro para aguardar a montagem da Home e o Index.tsx rolar
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    } else {
+      // Rotina normal
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const whatsappLink = "https://wa.me/5519992288312?text=Olá! Vim do SITE e quero melhorar o atendimento da minha empresa.";
@@ -72,6 +92,12 @@ const Header = () => {
           >
             FAQ
           </button>
+          <button 
+            onClick={() => scrollToSection("blog")} 
+            className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap"
+          >
+            Blog
+          </button>
           <Button 
             onClick={() => window.open(whatsappLink, '_blank')} 
             className="bg-gradient-to-r from-brand-navy to-brand-blue hover:from-brand-blue hover:to-brand-purple transition-all duration-500 text-white shadow-lg hover:shadow-xl transform hover:scale-105 text-sm xl:text-base px-4 xl:px-6"
@@ -98,6 +124,7 @@ const Header = () => {
               >
                 Serviços
               </button>
+
               <button 
                 onClick={() => scrollToSection("benefits")} 
                 className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
@@ -121,6 +148,12 @@ const Header = () => {
                 className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
               >
                 FAQ
+              </button>
+              <button 
+                onClick={() => scrollToSection("blog")} 
+                className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
+              >
+                Blog
               </button>
               <Button 
                 onClick={() => window.open(whatsappLink, '_blank')} 

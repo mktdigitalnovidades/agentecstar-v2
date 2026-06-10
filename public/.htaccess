@@ -6,11 +6,16 @@ DirectoryIndex index.html index.php
   RewriteEngine On
   RewriteBase /
 
-  # Não redirecionar arquivos e pastas reais (assets, imagens etc.)
+  # Não redirecionar arquivos reais (js, css, imagens, fontes, etc.)
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Tudo mais vai para o index.html do React
+  # Exceção: Não redirecionar apenas a pasta /blog/imagens (assets estáticos dentro de /blog/)
+  # Redireciona /blog, /blog/post-slug, /servicos/slug etc. para o React
+  RewriteCond %{REQUEST_URI} !^/blog/[^/]+\.(jpg|jpeg|png|gif|webp|svg|ico|pdf)$
+  RewriteCond %{REQUEST_URI} !^/assets/
+  RewriteCond %{REQUEST_URI} !^/lovable-uploads/
+
+  # Tudo mais vai para o index.html do React (incluindo /blog mesmo sendo pasta física)
   RewriteRule ^ index.html [L]
 </IfModule>
 

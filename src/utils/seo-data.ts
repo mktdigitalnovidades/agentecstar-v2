@@ -21,6 +21,23 @@ export const seoKeywords = [
   "Suporte para Atendimento e Vendas com IA"
 ];
 
+export const seoSegments = [
+  "",
+  "Clínica de Estética",
+  "Salão de Beleza",
+  "Academia",
+  "Oficina",
+  "Imobiliária",
+  "Loja de Roupas",
+  "Prestação de Serviços",
+  "Buffet e Eventos",
+  "Clínica Veterinária",
+  "Pet Shop",
+  "Corretor de Seguros",
+  "Corretor de Imoveis",
+  "E-commerce"
+];
+
 export const seoCities = [
   "", // Para gerar a versão sem cidade (ex: "agência de inteligência artificial")
   "Campinas",
@@ -59,19 +76,23 @@ export const slugify = (text: string) => {
 };
 
 export const generateAllRoutes = () => {
-  const routes: { slug: string; keyword: string; city: string; title: string }[] = [];
+  const routes: { slug: string; keyword: string; city: string; segment: string; title: string }[] = [];
   
   seoKeywords.forEach(keyword => {
-    seoCities.forEach(city => {
-      const suffix = city ? ` em ${city}` : "";
-      const fullTitle = `${keyword}${suffix}`;
-      const slug = slugify(fullTitle);
-      
-      routes.push({
-        slug,
-        keyword,
-        city,
-        title: fullTitle
+    seoSegments.forEach(segment => {
+      seoCities.forEach(city => {
+        const segSuffix = segment ? ` para ${segment}` : "";
+        const citySuffix = city ? ` em ${city}` : "";
+        const fullTitle = `${keyword}${segSuffix}${citySuffix}`;
+        const slug = slugify(fullTitle);
+        
+        routes.push({
+          slug,
+          keyword,
+          city,
+          segment,
+          title: fullTitle
+        });
       });
     });
   });
