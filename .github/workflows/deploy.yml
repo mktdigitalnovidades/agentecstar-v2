@@ -33,6 +33,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        # public_html/ é o document root do agentecstar.com na Hostinger
-        server-dir: public_html/
+        server-dir: ./
         dangerous-clean-slate: false
