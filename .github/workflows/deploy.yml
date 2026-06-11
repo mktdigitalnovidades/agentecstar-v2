@@ -23,7 +23,7 @@ jobs:
 
     - name: 📦 Instalar dependências e Gerar Build (dist)
       run: |
-        npm install
+        npm install --legacy-peer-deps
         npm run build
       
     - name: 📂 Sincronizar arquivos para a Hostinger via FTP
