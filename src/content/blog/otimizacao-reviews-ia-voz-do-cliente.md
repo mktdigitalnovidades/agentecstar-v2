@@ -3,8 +3,8 @@ title: "Como Usar IA para Responder Reviews Sem Parecer Robótico: O Guia Defini
 date: "2026-06-22"
 author: "AgenteC*"
 excerpt: "Aprenda a usar Inteligência Artificial para responder avaliações do Google, iFood e Reclame Aqui de forma humanizada, escalável e estratégica — sem perder a autenticidade da sua marca."
-image: "/blog/whatsapp-ai.png"
-coverImage: "/blog/whatsapp-ai.png"
+image: "/blog/reviews-ia-cover.png"
+coverImage: "/blog/reviews-ia-cover.png"
 tags: ["Reviews com IA", "Voz do Cliente", "Reputação Online", "Automação", "Gestão de Avaliações", "IA para Empresas"]
 ---
 
