@@ -6,6 +6,7 @@ export interface BlogPostMeta {
   date: string;
   image?: string;       // Thumbnail usado no card da listagem
   coverImage?: string;  // Imagem hero usada dentro do artigo (opcional, sobrescreve o image)
+  imageAlt?: string;    // Alt text SEO/GEO/AEO otimizado para a imagem de capa
   excerpt: string;
   tags: string[];
 }

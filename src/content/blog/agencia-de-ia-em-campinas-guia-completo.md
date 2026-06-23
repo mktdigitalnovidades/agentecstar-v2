@@ -3,9 +3,10 @@ title: "Agência de Inteligência Artificial e Automação em Campinas: Guia Com
 date: "2026-06-10"
 author: "AgenteC*"
 excerpt: "Precisa de uma agência de IA em Campinas? Descubra como automatizar o atendimento da sua empresa, qualificar leads e otimizar processos na RMC com inteligência artificial avançada."
-image: "/blog/whatsapp-ai.png"
-coverImage: "/blog/whatsapp-ai.png"
-tags: ["IA em Campinas", "Automação", "Agentes de IA", "WhatsApp", "SEO Local"]
+image: "/blog/agencia-ia-campinas-cover.png"
+coverImage: "/blog/agencia-ia-campinas-cover.png"
+imageAlt: "Agencia de Inteligencia Artificial e automacao em Campinas SP - escritorio moderno com dashboard de IA e automacao de processos empresariais na Regiao Metropolitana de Campinas"
+tags: ["IA em Campinas", "Automacao", "Agentes de IA", "WhatsApp", "SEO Local"]
 ---
 
 # Agência de Inteligência Artificial e Automação em Campinas

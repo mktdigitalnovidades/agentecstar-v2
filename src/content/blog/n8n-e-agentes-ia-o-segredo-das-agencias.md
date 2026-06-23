@@ -3,8 +3,10 @@ title: "N8N e Agentes IA: Bastidores da Mágica Focada em Resultados"
 date: "2026-03-27"
 author: "AgenteC*"
 excerpt: "Compreender os bastidores de um Agente de Voz e Texto ensina por que ferramentas cruas sem inteligência técnica integrada costumam falhar gravemente no Brasil."
-image: "/blog/n8n-nodes.png"
-tags: ["n8n", "Tecnologia", "API"]
+image: "/blog/n8n-agentes-ia-automacao-cover.png"
+coverImage: "/blog/n8n-agentes-ia-automacao-cover.png"
+imageAlt: "Fluxo de automacao n8n com nodes conectando WhatsApp CRM Google Agenda e pagamentos PIX - bastidores da automacao de agentes de IA pela AgentecStar"
+tags: ["n8n", "Tecnologia", "API", "Automacao", "Agentes de IA"]
 ---
 
 ## O 'Painel Escondido' da Produtividade

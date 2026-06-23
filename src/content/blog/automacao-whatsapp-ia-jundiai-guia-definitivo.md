@@ -3,9 +3,10 @@ title: "Automação de WhatsApp com Inteligência Artificial em Jundiaí: O Guia
 date: "2026-06-15"
 author: "AgenteC*"
 excerpt: "Quer vender mais e automatizar o suporte da sua empresa em Jundiaí e região? Descubra como os agentes de IA transformam o seu WhatsApp em uma máquina de vendas 24h."
-image: "/blog/whatsapp-ai.png"
-coverImage: "/blog/whatsapp-ai.png"
-tags: ["Automação WhatsApp", "IA em Jundiaí", "Agentes de IA", "Vendas no WhatsApp", "SEO Local"]
+image: "/blog/whatsapp-ia-jundiai-cover.png"
+coverImage: "/blog/whatsapp-ia-jundiai-cover.png"
+imageAlt: "Empresario em Jundiai usando automacao de WhatsApp com Inteligencia Artificial para vender 24 horas por dia - AgentecStar agencia de IA em Jundiai e regiao"
+tags: ["Automacao WhatsApp", "IA em Jundiai", "Agentes de IA", "Vendas no WhatsApp", "SEO Local"]
 ---
 
 # Automação de WhatsApp com Inteligência Artificial em Jundiaí: O Guia Definitivo

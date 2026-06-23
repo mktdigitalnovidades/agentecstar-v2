@@ -18,14 +18,69 @@ const BlogPost = () => {
   const { meta, content } = post;
   
   // URL Compartilhável
-  const postUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const postUrl = typeof window !== 'undefined' ? window.location.href : `https://agentecstar.com/blog/${slug}`;
   const shareWhatsApp = `https://wa.me/?text=${encodeURIComponent(`Achei incrível: ${meta.title} - Leia em: ${postUrl}`)}`;
 
   // Link Zap Padrão do AgentecStar
   const contactWhatsApp = "https://wa.me/5519992288312?text=Olá! Vim do BLOG e quero melhorar o atendimento da minha empresa.";
 
+  // Alt text SEO: usa imageAlt do frontmatter ou fallback descritivo
+  const imgAlt = meta.imageAlt || `${meta.title} - AgentecStar Agência de Inteligência Artificial`;
+
+  // JSON-LD BlogPosting Schema para SEO/AEO/GEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": meta.title,
+    "description": meta.excerpt,
+    "image": {
+      "@type": "ImageObject",
+      "url": `https://agentecstar.com${meta.coverImage || meta.image}`,
+      "description": imgAlt,
+      "width": 1200,
+      "height": 628
+    },
+    "datePublished": meta.date,
+    "dateModified": meta.date,
+    "author": {
+      "@type": "Organization",
+      "name": "AgentecStar",
+      "url": "https://agentecstar.com",
+      "sameAs": ["https://wa.me/5519992288312"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AgentecStar - Agência de Inteligência Artificial",
+      "url": "https://agentecstar.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://agentecstar.com/agentecstar-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl
+    },
+    "keywords": meta.tags.join(", "),
+    "articleSection": "Inteligência Artificial e Automação",
+    "inLanguage": "pt-BR",
+    "about": [
+      { "@type": "Thing", "name": "Inteligência Artificial" },
+      { "@type": "Thing", "name": "Automação de Processos" },
+      { "@type": "Thing", "name": "WhatsApp Business" }
+    ],
+    "mentions": [
+      { "@type": "Organization", "name": "AgentecStar", "url": "https://agentecstar.com" }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200">
+      {/* JSON-LD Structured Data para SEO/AEO/GEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       <main className="pt-32 pb-20">
@@ -69,7 +124,11 @@ const BlogPost = () => {
             <figure className="mb-12 rounded-3xl overflow-hidden border border-slate-700/50 shadow-2xl bg-slate-900 flex items-center justify-center">
               <img 
                 src={meta.coverImage || meta.image} 
-                alt={`Capa do artigo: ${meta.title}`} 
+                alt={imgAlt}
+                title={meta.title}
+                loading="eager"
+                width={1200}
+                height={628}
                 className="w-full h-auto object-contain"
               />
             </figure>

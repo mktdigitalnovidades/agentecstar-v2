@@ -3,8 +3,10 @@ title: "O Fim do Atendimento Humano? Como Agentes de IA Vendem 24/7 no WhatsApp"
 date: "2026-03-29"
 author: "AgenteC*"
 excerpt: "Nós dormimos. A IA, não. Descubra como a revolução do atendimento reativo por WhatsApp está roubando clientes da concorrência através da resposta instantânea da inteligência artificial."
-image: "/blog/whatsapp-ai.png"
-tags: ["WhatsApp", "Vendas", "Agentes"]
+image: "/blog/ia-vendas-24h-whatsapp-cover.png"
+coverImage: "/blog/ia-vendas-24h-whatsapp-cover.png"
+imageAlt: "Agente de Inteligencia Artificial vendendo 24 horas por dia no WhatsApp enquanto empresario dorme - automacao de atendimento e vendas sem horario comercial pela AgentecStar"
+tags: ["WhatsApp", "Vendas", "Agentes", "Automacao 24h", "IA Vendas"]
 ---
 
 ## A Morte do "Horário Comercial"

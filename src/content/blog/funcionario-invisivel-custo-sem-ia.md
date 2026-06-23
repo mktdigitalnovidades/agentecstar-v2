@@ -3,8 +3,10 @@ title: "A Conta Fechou: O Custo Absurdo de Não Ter IA na sua Operação"
 date: "2026-03-28"
 author: "AgenteC*"
 excerpt: "Empreendedores continuam fazendo as métricas incorretas. Ter Inteligência Artificial operando não é mais caro do que manter uma operação pesada gerando gargalos e clientes esperando."
-image: "/blog/cost-of-ai.png"
-tags: ["ROI", "Gestão", "Automação"]
+image: "/blog/custo-sem-ia-roi-cover.png"
+coverImage: "/blog/custo-sem-ia-roi-cover.png"
+imageAlt: "Comparativo ROI antes e depois da automacao com Inteligencia Artificial - empresario estressado sem IA versus empresario tranquilo com crescimento de receita usando AgentecStar"
+tags: ["ROI", "Gestao", "Automacao", "Custo IA", "Resultados"]
 ---
 
 ## O Elefante Branco na Sala do Empresário
