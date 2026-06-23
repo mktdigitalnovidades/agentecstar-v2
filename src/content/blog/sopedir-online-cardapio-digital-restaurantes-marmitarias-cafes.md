@@ -1,11 +1,11 @@
 ---
-title: "Cardápio Digital para Restaurantes, Marmitarias e Cafés: Como o Sópedir.online Transforma Seu Negócio com IA"
-date: "2026-06-22"
+title: "Cardapio Digital para Restaurantes, Marmitarias e Cafes: Como o Sopedir.online Transforma Seu Negocio com IA"
+date: "2026-06-23"
 author: "AgenteC*"
-excerpt: "Descubra como o Sópedir.online oferece cardápio digital premium + automação de atendimento via WhatsApp para restaurantes, marmitarias e cafés que querem vender mais sem pagar taxas por pedido."
+excerpt: "Descubra como o Sopedir.online oferece cardapio digital premium e automacao de atendimento via WhatsApp para restaurantes, marmitarias e cafes que querem vender mais sem pagar taxas por pedido."
 image: "/blog/whatsapp-ai.png"
 coverImage: "/blog/whatsapp-ai.png"
-tags: ["Cardápio Digital", "Restaurantes", "Marmitarias", "Cafés", "Automação WhatsApp", "Sópedir", "Delivery sem Taxas"]
+tags: ["Cardapio Digital", "Restaurantes", "Marmitarias", "Cafes", "Automacao WhatsApp", "Sopedir", "Delivery sem Taxas"]
 ---
 
 # Cardápio Digital para Restaurantes, Marmitarias e Cafés: A Solução Completa com IA
