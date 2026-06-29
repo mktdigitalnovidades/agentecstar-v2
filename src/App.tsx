@@ -9,6 +9,7 @@ import Sitemap from "./pages/Sitemap";
 import SeoLandingPage from "./pages/SeoLandingPage";
 import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
+import CriacaoDeSite from "./pages/CriacaoDeSite";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -24,6 +25,7 @@ const App = () => (
         <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/criacao-de-site" element={<CriacaoDeSite />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/mapa-do-site" element={<Sitemap />} />
