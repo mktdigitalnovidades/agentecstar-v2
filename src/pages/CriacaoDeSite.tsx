@@ -2,6 +2,10 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { 
   Globe, 
   Search, 
@@ -18,10 +22,24 @@ import {
   Plus, 
   Minus,
   HelpCircle,
-  Code2
+  Code2,
+  Phone
 } from "lucide-react";
 
 export default function CriacaoDeSite() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [notes, setNotes] = useState("");
+
+  const handleWhatsAppRedirect = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim()) return;
+    
+    const text = `Olá! Meu nome é ${name.trim()}${company.trim() ? `, da empresa ${company.trim()}` : ""}.\n\nEstou vindo da página de Criação de Sites e gostaria de solicitar um orçamento.\n\nDetalhes/Observações:\n${notes.trim()}`;
+    const link = `https://wa.me/5519992288312?text=${encodeURIComponent(text)}`;
+    window.open(link, '_blank');
+  };
+
   const whatsappLink = "https://wa.me/5519992288312?text=Olá! Vim da página de Criação de Sites e gostaria de solicitar um orçamento para o meu negócio.";
 
   // Estado para controlar o acordeão de FAQ
@@ -364,6 +382,83 @@ export default function CriacaoDeSite() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Contato WhatsApp (Preenchimento igual ao principal da AgentecStar) */}
+      <section id="contact-form" className="py-20 bg-gradient-brand border-t border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Faça Seu Orçamento de Site
+            </h2>
+            <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+              Preencha os dados abaixo e seja direcionado diretamente para falar com o nosso time técnico no WhatsApp.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-white">
+                  Orçamento via WhatsApp
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleWhatsAppRedirect} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-white font-medium">Nome *</Label>
+                    <Input 
+                      id="name" 
+                      type="text" 
+                      required 
+                      placeholder="Seu nome" 
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="bg-white/5 border-white/20 text-white placeholder-slate-400 focus:border-brand-cyan"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="company" className="text-white font-medium">Empresa</Label>
+                    <Input 
+                      id="company" 
+                      type="text" 
+                      placeholder="Nome da sua empresa (opcional)" 
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                      className="bg-white/5 border-white/20 text-white placeholder-slate-400 focus:border-brand-cyan"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="notes" className="text-white font-medium">O que você precisa no site?</Label>
+                    <Textarea 
+                      id="notes" 
+                      placeholder="Ex: Preciso de uma Landing Page para meu consultório ou site institucional para minha empresa com 5 páginas..." 
+                      value={notes}
+                      onChange={(e) => setNotes(e.target.value)}
+                      className="bg-white/5 border-white/20 text-white placeholder-slate-400 focus:border-brand-cyan min-h-[100px]"
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-center space-x-2 text-white pb-2">
+                    <Phone className="h-5 w-5 text-brand-cyan" />
+                    <span className="text-xl font-semibold">(19) 99228-8312</span>
+                  </div>
+                  
+                  <Button 
+                    type="submit"
+                    size="lg"
+                    className="bg-green-500 hover:bg-green-600 text-white w-full py-4 text-lg font-bold transition-all duration-300"
+                  >
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Enviar para o WhatsApp
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
