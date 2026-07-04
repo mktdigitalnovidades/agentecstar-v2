@@ -13,10 +13,11 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative flex items-center group cursor-pointer" onClick={() => { window.scrollTo({top: 0, behavior: 'smooth'}); navigate('/'); }}>
                 <img 
-                  src="/agentecstar-icon.png" 
+                  src="/agentecstar-icon.webp" 
                   alt="AgentecStar – Automação com IA em Campinas" 
                   width="40"
                   height="40"
+                  loading="lazy"
                   className="h-10 w-auto relative z-10 transition-transform duration-500 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(62,206,208,0.5)]" 
                 />
                 <span className="ml-3 text-2xl font-black tracking-tighter text-white drop-shadow-md">

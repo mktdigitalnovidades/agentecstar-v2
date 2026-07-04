@@ -131,7 +131,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Confirmação e agendamento automático de consultas com integração via WhatsApp.",
       features: ["Agendamento 24/7", "Confirmação automática", "Lembretes de consulta", "Histórico médico"],
       color: "#D946EF",
-      image: "/clinic_background.png"
+      image: "/clinic_background.webp"
     },
     {
       icon: ShoppingBag,
@@ -139,7 +139,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Suporte a pedidos, catálogo de produtos e solução de dúvidas frequentes.",
       features: ["Catálogo automático", "Status de pedidos", "Dúvidas frequentes", "Suporte pós-venda"],
       color: "#3ECED0",
-      image: "/retail_background.png"
+      image: "/retail_background.webp"
     },
     {
       icon: Calendar,
@@ -147,7 +147,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Agendamentos de banho, tosa e consultas veterinárias de forma independente.",
       features: ["Agendamento online", "Lembrete de serviços", "Histórico do pet", "Promoções automáticas"],
       color: "#542FA3",
-      image: "/petshop_background.png"
+      image: "/petshop_background.webp"
     },
     {
       icon: Car,
@@ -155,7 +155,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Agendamento de test drive automático e consulta de estoque via IA.",
       features: ["Test drive automático", "Consulta de estoque", "Financiamento", "Agendamento de visitas"],
       color: "#00E5FF",
-      image: "/dealership_background.png"
+      image: "/dealership_background.webp"
     },
     {
       icon: PartyPopper,
@@ -163,7 +163,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Organização e envio de convites interativos, orçamentos e agendamento.",
       features: ["Confirmação de presença", "Cardápio automático", "Orçamentos imediatos", "Agenda de eventos"],
       color: "#C55C8A",
-      image: "/events_background.png"
+      image: "/events_background.webp"
     },
     {
       icon: Scissors,
@@ -171,7 +171,7 @@ const UseCases = ({ segment }: UseCasesProps) => {
       description: "Gestão inteligente da agenda dos profissionais e tratamentos capilares.",
       features: ["Agendamento online", "Histórico de serviços", "Lembretes automáticos", "Promoções via IA"],
       color: "#3ECED0",
-      image: "/salon_background.png"
+      image: "/salon_background.webp"
     }
   ];
 
@@ -271,7 +271,8 @@ const UseCases = ({ segment }: UseCasesProps) => {
                       {/* Imagem de Fundo Fotorealista */}
                       <img 
                         src={useCase.image} 
-                        alt={useCase.title} 
+                        alt={useCase.title}
+                        loading="lazy"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                       />
                       

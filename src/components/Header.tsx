@@ -49,8 +49,11 @@ const Header = () => {
           <div className="relative flex items-center group cursor-pointer" onClick={() => scrollToSection("hero")}>
             {/* Imagem do Ícone da Estrela */}
             <img 
-              src="/agentecstar-icon.png" 
-              alt="AgentecStar Icon" 
+              src="/agentecstar-icon.webp" 
+              alt="AgentecStar – Automação com IA em Campinas" 
+              width="48"
+              height="48"
+              loading="eager"
               className="h-10 sm:h-12 w-auto relative z-10 transition-transform duration-500 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(62,206,208,0.5)]" 
             />
             {/* Lettering Stylizado Neon */}

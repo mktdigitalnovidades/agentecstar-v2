@@ -141,7 +141,10 @@ const Testimonials = () => {
                       <div className="flex items-center space-x-4 mb-4">
                         <img 
                           src={testimonial.avatar} 
-                          alt={testimonial.author} 
+                          alt={`Foto de ${testimonial.author} - depoimento AgentecStar`}
+                          width="48"
+                          height="48"
+                          loading="lazy"
                           className="w-12 h-12 rounded-full border border-brand-cyan object-cover shadow-sm grayscale hover:grayscale-0 transition-all duration-300"
                         />
                         <cite className="font-semibold text-lg not-italic" style={{ color: '#3ECED0' }}>

@@ -113,7 +113,7 @@ const BlogPost = () => {
               </div>
               
               <div className="flex items-center gap-2">
-                <img src="/agentecstar-logo.png" className="w-6 h-6 rounded-full bg-slate-800 p-1" />
+                <img src="/agentecstar-logo.png" alt="AgentecStar" width="24" height="24" loading="lazy" className="w-6 h-6 rounded-full bg-slate-800 p-1" />
                 <span>Por <strong>Equipe AgentecStar</strong></span>
               </div>
             </div>

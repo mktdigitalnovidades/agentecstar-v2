@@ -38,7 +38,7 @@ const BlogPreview = () => {
             >
               <div className="aspect-square sm:aspect-video lg:aspect-square w-full overflow-hidden bg-slate-800 relative">
                 {post.image ? (
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={post.image} alt={`Imagem do artigo: ${post.title}`} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 ) : (
                   <div className="w-full h-full bg-gradient-brand flex items-center justify-center text-brand-cyan opacity-50 font-bold" />
                 )}
