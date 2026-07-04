@@ -18,4 +18,5 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://AgentecStar.com.br/sitemap.xml
+# Sitemap — domínio correto: agentecstar.com
+Sitemap: https://agentecstar.com/sitemap.xml

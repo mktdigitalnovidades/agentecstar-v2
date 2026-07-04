@@ -10,6 +10,7 @@ import SeoLandingPage from "./pages/SeoLandingPage";
 import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
 import CriacaoDeSite from "./pages/CriacaoDeSite";
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/mapa-do-site" element={<Sitemap />} />
+          <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
           <Route path="/:slug" element={<SeoLandingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

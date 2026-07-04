@@ -14,7 +14,9 @@ const Footer = () => {
               <div className="relative flex items-center group cursor-pointer" onClick={() => { window.scrollTo({top: 0, behavior: 'smooth'}); navigate('/'); }}>
                 <img 
                   src="/agentecstar-icon.png" 
-                  alt="AgentecStar Icon" 
+                  alt="AgentecStar – Automação com IA em Campinas" 
+                  width="40"
+                  height="40"
                   className="h-10 w-auto relative z-10 transition-transform duration-500 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(62,206,208,0.5)]" 
                 />
                 <span className="ml-3 text-2xl font-black tracking-tighter text-white drop-shadow-md">
@@ -41,9 +43,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <div className="space-y-2 text-gray-300">
-              <p>WhatsApp: (19) 99228-8312</p>
+              <p>
+                <a 
+                  href="https://wa.me/5519992288312?text=Olá! Vim do site AgentecStar e quero saber mais." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-cyan transition-colors"
+                >
+                  WhatsApp: (19) 99228-8312
+                </a>
+              </p>
               <p>Atendimento: 24 horas</p>
-              <p>Brasil</p>
+              <p>Campinas – SP, Brasil</p>
             </div>
           </div>
         </div>
@@ -60,9 +71,9 @@ const Footer = () => {
              <Link to="/mapa-do-site" className="text-sm font-medium text-brand-cyan hover:underline transition-all">
                 Mapa do Site
              </Link>
-             <a href="#" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+             <Link to="/politica-de-privacidade" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
                 Política de Privacidade
-             </a>
+             </Link>
           </div>
         </div>
       </div>
