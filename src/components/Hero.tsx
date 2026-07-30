@@ -92,7 +92,7 @@ const Bubble = ({ msg }: { msg: ChatMsg }) => {
 const PhoneChat = () => {
   const [visibleCount, setVisibleCount] = useState(0);
   const [showTyping, setShowTyping] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const chatRef = useRef<HTMLDivElement>(null);
 
   /* Sequência de animação */
   useEffect(() => {
@@ -133,9 +133,10 @@ const PhoneChat = () => {
     return () => { cancelled = true; };
   }, []);
 
-  /* auto-scroll */
+  /* auto-scroll — rola APENAS o container interno, nunca a página */
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const el = chatRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
   }, [visibleCount, showTyping]);
 
   return (
@@ -199,9 +200,11 @@ const PhoneChat = () => {
 
         {/* Mensagens */}
         <div
+          ref={chatRef}
           className="flex-1 overflow-y-auto px-3 py-3 space-y-2.5 flex flex-col"
           style={{
             background: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E\"), linear-gradient(180deg, rgba(10,14,35,0.9) 0%, rgba(15,10,40,0.95) 100%)",
+            overscrollBehavior: "contain",
           }}
         >
           {/* Data header */}
@@ -214,7 +217,6 @@ const PhoneChat = () => {
           ))}
 
           {showTyping && <TypingDots />}
-          <div ref={bottomRef} />
         </div>
 
         {/* Input bar */}

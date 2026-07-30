@@ -11,12 +11,29 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    target: "esnext",
+    minify: "esbuild",
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        /* Separa vendors pesados em chunks próprios para melhor cache */
+        manualChunks: {
+          "vendor-react":  ["react", "react-dom", "react-router-dom"],
+          "vendor-ui":     ["@radix-ui/react-dialog", "@radix-ui/react-tooltip", "@radix-ui/react-accordion"],
+          "vendor-query":  ["@tanstack/react-query"],
+          "vendor-lucide": ["lucide-react"],
+        },
+      },
+    },
+    /* Avisa se algum chunk ultrapassar 400 KB */
+    chunkSizeWarningLimit: 400,
   },
 }));

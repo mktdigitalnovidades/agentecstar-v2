@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
 
     <!-- ═══════════════════════════════════════════════════ -->
     <!-- TITLE: max 60 chars para não truncar no Google      -->
@@ -27,14 +27,27 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="MP7tpGBgYkmCpy9_MfFz04T4974i7zWssoloq_oBj88" />
 
-    <!-- Google AdSense -->
+    <!-- Google AdSense (defer para não bloquear render) -->
     <meta name="google-adsense-account" content="ca-pub-4961237364015129">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4961237364015129"
+    <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4961237364015129"
      crossorigin="anonymous"></script>
 
     <!-- Performance: preconnect para recursos externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://app.gptmaker.ai" />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
+    <!-- Google Fonts — non-blocking (font-display:swap embutido na URL) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    </noscript>
 
     <!-- GEO SEO: Localização invisível para buscadores e LLMs -->
     <meta name="geo.region" content="BR-SP" />
