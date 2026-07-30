@@ -1,16 +1,20 @@
-
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+
+/* Seções above-the-fold: carregam imediatamente */
 import PainPoints from "@/components/PainPoints";
 import Services from "@/components/Services";
-import Benefits from "@/components/Benefits";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
-import UseCases from "@/components/UseCases";
-import FAQ from "@/components/FAQ";
-import BlogPreview from "@/components/BlogPreview";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
+/* Seções below-the-fold: lazy — só carregam quando o usuário rola */
+const Benefits     = lazy(() => import("@/components/Benefits"));
+const HowItWorks   = lazy(() => import("@/components/HowItWorks"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const UseCases     = lazy(() => import("@/components/UseCases"));
+const FAQ          = lazy(() => import("@/components/FAQ"));
+const BlogPreview  = lazy(() => import("@/components/BlogPreview"));
+const Contact      = lazy(() => import("@/components/Contact"));
+const Footer       = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
@@ -19,14 +23,16 @@ const Index = () => {
       <Hero />
       <PainPoints />
       <Services />
-      <Benefits />
-      <HowItWorks />
-      <Testimonials />
-      <UseCases />
-      <FAQ />
-      <BlogPreview />
-      <Contact />
-      <Footer />
+      <Suspense fallback={null}>
+        <Benefits />
+        <HowItWorks />
+        <Testimonials />
+        <UseCases />
+        <FAQ />
+        <BlogPreview />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 };

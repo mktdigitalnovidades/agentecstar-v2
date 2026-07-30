@@ -152,3 +152,55 @@
   .container { padding-left: 1rem; padding-right: 1rem; }
   h1, h2, h3, h4, h5, h6 { word-break: break-word; overflow-wrap: break-word; }
 }
+
+/* ── Performance: GPU compositing nas animações ──────────────────── */
+.animate-float,
+.animate-pulse,
+.animate-bounce,
+.animate-glow-pulse,
+.animate-fade-in {
+  will-change: transform, opacity;
+}
+
+/* ── Reduz animações para usuários que preferem menos movimento ───── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-bounce,
+  .animate-glow-pulse,
+  .shimmer-effect,
+  .text-gradient-cyber,
+  .text-gradient-brand,
+  .text-gradient {
+    animation: none !important;
+  }
+  .animate-pulse {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
+/* ── content-visibility: seções below-the-fold renderizam só quando visíveis */
+#benefits,
+#how-it-works,
+#testimonials,
+#use-cases,
+#faq,
+#blog,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+/* ── Imagens: evita layout shift ─────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Blur pesado só em telas grandes (economiza GPU mobile) ──────── */
+@media (max-width: 768px) {
+  .blur-3xl { filter: blur(40px) !important; }
+  .backdrop-blur-xl { backdrop-filter: blur(12px) !important; }
+  .backdrop-blur-sm { backdrop-filter: blur(4px) !important; }
+}
+
