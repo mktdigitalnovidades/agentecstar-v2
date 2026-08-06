@@ -68,12 +68,27 @@ const Footer = () => {
           <p className="text-gray-600 text-xs mt-2 max-w-lg mx-auto leading-relaxed">
             Atendemos empresas em Campinas, Jundiaí, Valinhos, Vinhedo, Hortolândia, Sumaré, Grande SP e todo o Brasil.
           </p>
-          <div className="mt-4 border-t border-gray-800 pt-4 w-full flex justify-center gap-6">
-             <Link to="/mapa-do-site" className="text-sm font-medium text-brand-cyan hover:underline transition-all">
-                Mapa do Site
+          <div className="mt-4 border-t border-gray-800 pt-4 w-full flex flex-wrap justify-center gap-x-6 gap-y-2">
+             <Link to="/quem-somos" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Quem Somos
              </Link>
              <Link to="/politica-de-privacidade" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
                 Política de Privacidade
+             </Link>
+             <Link to="/politica-de-cookies" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Política de Cookies
+             </Link>
+             <Link to="/direitos-autorais" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Direitos Autorais
+             </Link>
+             <Link to="/termos-de-uso" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Termos de Uso
+             </Link>
+             <Link to="/fale-conosco" className="text-sm font-medium text-slate-500 hover:text-slate-300 transition-all">
+                Fale Conosco
+             </Link>
+             <Link to="/mapa-do-site" className="text-sm font-medium text-brand-cyan hover:underline transition-all">
+                Mapa do Site
              </Link>
           </div>
         </div>

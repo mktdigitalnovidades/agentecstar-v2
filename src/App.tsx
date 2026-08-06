@@ -18,6 +18,11 @@ const BlogIndex          = lazy(() => import("./pages/BlogIndex"));
 const BlogPost           = lazy(() => import("./pages/BlogPost"));
 const CriacaoDeSite      = lazy(() => import("./pages/CriacaoDeSite"));
 const PoliticaDePrivacidade = lazy(() => import("./pages/PoliticaDePrivacidade"));
+const QuemSomos          = lazy(() => import("./pages/QuemSomos"));
+const TermosDeUso        = lazy(() => import("./pages/TermosDeUso"));
+const PoliticaDeCookies  = lazy(() => import("./pages/PoliticaDeCookies"));
+const DireitosAutorais   = lazy(() => import("./pages/DireitosAutorais"));
+const FaleConosco        = lazy(() => import("./pages/FaleConosco"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,6 +49,11 @@ const App = () => (
             <Route path="/blog/:slug"              element={<BlogPost />} />
             <Route path="/mapa-do-site"            element={<Sitemap />} />
             <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+            <Route path="/quem-somos"              element={<QuemSomos />} />
+            <Route path="/termos-de-uso"           element={<TermosDeUso />} />
+            <Route path="/politica-de-cookies"     element={<PoliticaDeCookies />} />
+            <Route path="/direitos-autorais"       element={<DireitosAutorais />} />
+            <Route path="/fale-conosco"            element={<FaleConosco />} />
             <Route path="/:slug"                   element={<SeoLandingPage />} />
             <Route path="*"                        element={<NotFound />} />
           </Routes>

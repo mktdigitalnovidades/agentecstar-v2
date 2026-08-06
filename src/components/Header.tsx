@@ -65,6 +65,12 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <Link 
+            to="/quem-somos" 
+            className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap"
+          >
+            Quem Somos
+          </Link>
           <button 
             onClick={() => scrollToSection("services")} 
             className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap"
@@ -101,6 +107,12 @@ const Header = () => {
           >
             Blog
           </button>
+          <Link 
+            to="/fale-conosco" 
+            className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap"
+          >
+            Fale Conosco
+          </Link>
           <Button 
             onClick={() => window.open(whatsappLink, '_blank')} 
             className="bg-gradient-to-r from-brand-navy to-brand-blue hover:from-brand-blue hover:to-brand-purple transition-all duration-500 text-white shadow-lg hover:shadow-xl transform hover:scale-105 text-sm xl:text-base px-4 xl:px-6"
@@ -121,6 +133,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-white/20 lg:hidden shadow-lg">
             <nav className="flex flex-col space-y-4 p-4 sm:p-6">
+              <Link 
+                to="/quem-somos" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
+              >
+                Quem Somos
+              </Link>
               <button 
                 onClick={() => scrollToSection("services")} 
                 className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
@@ -158,6 +177,13 @@ const Header = () => {
               >
                 Blog
               </button>
+              <Link 
+                to="/fale-conosco" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
+              >
+                Fale Conosco
+              </Link>
               <Button 
                 onClick={() => window.open(whatsappLink, '_blank')} 
                 className="bg-gradient-to-r from-brand-navy to-brand-blue hover:from-brand-blue hover:to-brand-purple transition-all duration-500 text-white w-full text-sm sm:text-base"
