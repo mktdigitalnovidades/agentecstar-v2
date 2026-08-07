@@ -5,26 +5,26 @@ const Services = () => {
   const services = [
     {
       icon: Bot,
-      title: "Atendimento automatizado com IA",
-      description: "Respostas inteligentes e personalizadas 24/7 para seus clientes",
+      title: "Atendimento automático no WhatsApp",
+      description: "Assistente virtual que responde dúvidas comuns e envia catálogos ou propostas na hora.",
       color: '#3ECED0',
     },
     {
       icon: Users,
-      title: "Geração e qualificação de leads",
-      description: "Identifique e qualifique potenciais clientes automaticamente",
+      title: "Qualificação de Leads",
+      description: "Chatbot que filtra interessados em aluguel, compra ou serviços antes de passar ao corretor ou vendedor.",
       color: '#D946EF',
     },
     {
       icon: MessageSquare,
-      title: "Respostas instantâneas personalizadas",
-      description: "Mensagens customizadas com o tom de voz da sua empresa",
+      title: "Chatbot sem fila de espera",
+      description: "Reduza a perda de clientes respondendo instantaneamente no primeiro contato do dia ou da noite.",
       color: '#542FA3',
     },
     {
       icon: Calendar,
-      title: "Agendamentos e suporte automático",
-      description: "Gestão completa de agendamentos e suporte técnico integrado",
+      title: "Automação de agendamento",
+      description: "Agendamento automático de consultas, vistorias e serviços integrado diretamente ao WhatsApp.",
       color: '#C55C8A',
     }
   ];

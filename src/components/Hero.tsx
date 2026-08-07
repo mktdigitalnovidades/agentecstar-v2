@@ -78,19 +78,16 @@ const Hero = () => {
                 </span>
                 <br />
                 <span className="text-2xl md:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent leading-snug block mt-2">
-                  Agentes de IA para WhatsApp — Campinas - SP e todo Brasil
+                  Atendimento Automático no WhatsApp em Campinas e Região
                 </span>
               </h1>
             </div>
 
             {/* Body */}
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl">
-              AgentecStar desenvolve agentes de IA sob medida para o seu WhatsApp
-              que atendem 24h, 7 dias por semana, respondendo em segundos.{" "}
-              <br className="hidden sm:block" />
-              <br className="hidden sm:block" />
-              Você fica livre para fazer o que um dono de empresa deve fazer:{" "}
-              <strong className="text-white">crescer.</strong>
+              Chega de perder vendas! Tenha um <strong className="text-white">chatbot que não deixa o cliente esperando</strong>. 
+              Criamos automação de agendamento e atendimento personalizado no WhatsApp para clínicas, imobiliárias, oficinas e empresas em Campinas-SP e em todo o Brasil. 
+              Atendimento ágil 24 horas por dia, 7 dias por semana.
             </p>
 
             {/* CTAs */}

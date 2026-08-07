@@ -31,13 +31,23 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Serviços</h3>
+            <h3 className="text-lg font-semibold mb-4">Soluções</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Agentes de IA</li>
-              <li>Automação de Atendimento</li>
-              <li>Chatbots WhatsApp</li>
-              <li>Integração com n8n</li>
-              <li>Qualificação de Leads</li>
+              <li>
+                <Link to="/automacao-para-clinicas" className="hover:text-brand-cyan transition-colors">
+                  Agendamento para Clínicas
+                </Link>
+              </li>
+              <li>
+                <Link to="/automacao-para-imobiliarias" className="hover:text-brand-cyan transition-colors">
+                  Automação para Imobiliárias
+                </Link>
+              </li>
+              <li>
+                <Link to="/automacao-para-oficinas" className="hover:text-brand-cyan transition-colors">
+                  Chatbot para Oficinas
+                </Link>
+              </li>
             </ul>
           </div>
 

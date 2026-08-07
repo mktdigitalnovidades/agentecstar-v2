@@ -23,6 +23,9 @@ const TermosDeUso        = lazy(() => import("./pages/TermosDeUso"));
 const PoliticaDeCookies  = lazy(() => import("./pages/PoliticaDeCookies"));
 const DireitosAutorais   = lazy(() => import("./pages/DireitosAutorais"));
 const FaleConosco        = lazy(() => import("./pages/FaleConosco"));
+const Clinicas           = lazy(() => import("./pages/Clinicas"));
+const Imobiliarias       = lazy(() => import("./pages/Imobiliarias"));
+const Oficinas           = lazy(() => import("./pages/Oficinas"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -54,6 +57,9 @@ const App = () => (
             <Route path="/politica-de-cookies"     element={<PoliticaDeCookies />} />
             <Route path="/direitos-autorais"       element={<DireitosAutorais />} />
             <Route path="/fale-conosco"            element={<FaleConosco />} />
+            <Route path="/automacao-para-clinicas"     element={<Clinicas />} />
+            <Route path="/automacao-para-imobiliarias" element={<Imobiliarias />} />
+            <Route path="/automacao-para-oficinas"     element={<Oficinas />} />
             <Route path="/:slug"                   element={<SeoLandingPage />} />
             <Route path="*"                        element={<NotFound />} />
           </Routes>

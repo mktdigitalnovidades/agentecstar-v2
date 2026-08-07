@@ -71,6 +71,22 @@ const Header = () => {
           >
             Quem Somos
           </Link>
+          <div className="relative group py-2">
+            <button className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap flex items-center gap-1">
+              Soluções
+            </button>
+            <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-800/80 rounded-xl py-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <Link to="/automacao-para-clinicas" className="block px-4 py-2.5 text-sm text-gray-300 hover:text-brand-cyan hover:bg-slate-800/60 transition-colors">
+                Agendamento para Clínicas
+              </Link>
+              <Link to="/automacao-para-imobiliarias" className="block px-4 py-2.5 text-sm text-gray-300 hover:text-brand-cyan hover:bg-slate-800/60 transition-colors">
+                Automação para Imobiliárias
+              </Link>
+              <Link to="/automacao-para-oficinas" className="block px-4 py-2.5 text-sm text-gray-300 hover:text-brand-cyan hover:bg-slate-800/60 transition-colors">
+                Chatbot para Oficinas
+              </Link>
+            </div>
+          </div>
           <button 
             onClick={() => scrollToSection("services")} 
             className="hover:text-brand-purple transition-all duration-300 hover:scale-105 font-medium text-slate-50 text-sm xl:text-base whitespace-nowrap"
@@ -140,6 +156,19 @@ const Header = () => {
               >
                 Quem Somos
               </Link>
+              
+              <div className="border-t border-gray-200 pt-2 flex flex-col space-y-2">
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider pl-1">Soluções</span>
+                <Link to="/automacao-para-clinicas" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-600 hover:text-brand-purple pl-3 font-medium text-sm">
+                  • Clínicas e Consultórios
+                </Link>
+                <Link to="/automacao-para-imobiliarias" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-600 hover:text-brand-purple pl-3 font-medium text-sm">
+                  • Imobiliárias e Corretores
+                </Link>
+                <Link to="/automacao-para-oficinas" onClick={() => setIsMenuOpen(false)} className="text-left text-gray-600 hover:text-brand-purple pl-3 font-medium text-sm">
+                  • Oficinas Mecânicas
+                </Link>
+              </div>
               <button 
                 onClick={() => scrollToSection("services")} 
                 className="text-left text-gray-700 hover:text-brand-purple transition-colors font-medium text-sm sm:text-base"
