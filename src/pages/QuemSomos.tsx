@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Users } from "lucide-react";
 
 const QuemSomos = () => {
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Quem Somos | AgentecStar – Especialistas em IA e Automação"
+        description="Conheça a história e missão da AgentecStar, empresa especializada no desenvolvimento de agentes de IA e automação de atendimento em Campinas-SP."
+        canonical="https://agentecstar.com/quem-somos"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -142,6 +143,12 @@ export default function CriacaoDeSite() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-brand-slate text-slate-200">
+      <SEOHead
+        title="Criação de Sites Profissionais e Landing Pages de Alta Conversão | AgentecStar"
+        description="Criação de sites modernos, responsivos e ultra rápidos integrados com IA e WhatsApp. Otimizado para o Google em Campinas e região."
+        canonical="https://agentecstar.com/criacao-de-site"
+        robots="index, follow"
+      />
       <Header />
 
       {/* Hero Section */}

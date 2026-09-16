@@ -2,6 +2,7 @@ import { getAllPosts } from "@/utils/blog-data";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { CalendarDays, ArrowRight } from "lucide-react";
 
 const BlogIndex = () => {
@@ -9,6 +10,12 @@ const BlogIndex = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Blog AgentecStar – Inteligência Artificial, Automação e Negócios"
+        description="Estratégias avançadas de Inteligência Artificial, chatbots para WhatsApp e automação de processos para empresas escalarem vendas."
+        canonical="https://agentecstar.com/blog"
+        robots="index, follow"
+      />
       <Header />
       
       <div className="container mx-auto px-4 py-16 max-w-6xl">

@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Copyright } from "lucide-react";
 
 const DireitosAutorais = () => {
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Direitos Autorais | AgentecStar"
+        description="Termos de Propriedade Intelectual e Proteção de Conteúdo da AgentecStar."
+        canonical="https://agentecstar.com/direitos-autorais"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

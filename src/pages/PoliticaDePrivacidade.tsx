@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Shield } from "lucide-react";
 
 const PoliticaDePrivacidade = () => {
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Política de Privacidade | AgentecStar"
+        description="Termos e condições de privacidade da AgentecStar em conformidade com a LGPD."
+        canonical="https://agentecstar.com/politica-de-privacidade"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

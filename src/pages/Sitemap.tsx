@@ -2,6 +2,7 @@ import { generateAllRoutes } from "@/utils/seo-data";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Sitemap = () => {
   const routes = generateAllRoutes();
@@ -16,6 +17,12 @@ const Sitemap = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Mapa do Site | AgentecStar"
+        description="Navegue por todas as páginas, soluções e conteúdos da AgentecStar."
+        canonical="https://agentecstar.com/mapa-do-site"
+        robots="index, follow"
+      />
       <Header />
       
       <div className="container mx-auto px-4 py-16">

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Wrench, MessageSquare, Clock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +9,12 @@ const Oficinas = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Chatbot e Agendamento para Oficinas Mecânicas | AgentecStar"
+        description="Automatize orçamentos, revisões e avisos de carro pronto no WhatsApp para oficinas mecânicas e centros automotivos."
+        canonical="https://agentecstar.com/automacao-para-oficinas"
+        robots="index, follow"
+      />
       <Header />
 
       {/* Hero Section */}

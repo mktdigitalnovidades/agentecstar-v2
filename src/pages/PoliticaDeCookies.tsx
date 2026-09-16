@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Cookie } from "lucide-react";
 
 const PoliticaDeCookies = () => {
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Política de Cookies | AgentecStar"
+        description="Informações sobre o uso de cookies e tecnologias de rastreamento no site agentecstar.com."
+        canonical="https://agentecstar.com/politica-de-cookies"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

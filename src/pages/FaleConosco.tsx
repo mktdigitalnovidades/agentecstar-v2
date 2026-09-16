@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,12 @@ const FaleConosco = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Fale Conosco | AgentecStar – Contato e Atendimento"
+        description="Entre em contato com os especialistas da AgentecStar para tirar dúvidas e solicitar orçamentos para a implementação de IA na sua empresa."
+        canonical="https://agentecstar.com/fale-conosco"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

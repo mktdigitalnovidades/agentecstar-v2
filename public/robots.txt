@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /*?*
 
-# Crawlers de IA — Permitidos para indexar o conteúdo
+# Crawlers de IA — Permitidos para indexar e citar o conteúdo
 User-agent: GPTBot
 Allow: /
 
@@ -18,5 +19,5 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Sitemap — domínio correto: agentecstar.com
+# Sitemap Oficial — domínio canônico: agentecstar.com
 Sitemap: https://agentecstar.com/sitemap.xml

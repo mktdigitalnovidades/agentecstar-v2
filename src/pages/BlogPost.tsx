@@ -3,6 +3,7 @@ import { getPostBySlug } from "@/utils/blog-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import SEOHead from "@/components/SEOHead";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm"; // Para tabelas e links markdown nativos
 import { ArrowLeft, CalendarDays, Share2, MessageCircle } from "lucide-react";
@@ -76,6 +77,14 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200">
+      <SEOHead
+        title={`${meta.title} | Blog AgentecStar`}
+        description={meta.excerpt}
+        canonical={`https://agentecstar.com/blog/${slug}`}
+        robots="index, follow"
+        ogImage={meta.coverImage || meta.image ? `https://agentecstar.com${meta.coverImage || meta.image}` : undefined}
+        ogType="article"
+      />
       {/* JSON-LD Structured Data para SEO/AEO/GEO */}
       <script
         type="application/ld+json"

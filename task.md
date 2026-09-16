@@ -1,9 +1,10 @@
-- `[x]` Criar páginas institucionais e de conformidade
-  - `[x]` Quem Somos / Sobre nós (`src/pages/QuemSomos.tsx`)
-  - `[x]` Termos de Uso (`src/pages/TermosDeUso.tsx`)
-  - `[x]` Política de Cookies (`src/pages/PoliticaDeCookies.tsx`)
-  - `[x]` Direitos Autorais (`src/pages/DireitosAutorais.tsx`)
-  - `[x]` Fale Conosco (`src/pages/FaleConosco.tsx`)
-- `[x]` Configurar roteamento em `src/App.tsx`
-- `[x]` Adicionar os links no `src/components/Header.tsx` e `src/components/Footer.tsx`
-- `[x]` Verificar o site localmente e confirmar o funcionamento
+- `[x]` Ajustar a cópia da Home para termos de busca real
+  - `[x]` Atualizar `src/components/Hero.tsx`
+  - `[x]` Atualizar `src/components/Services.tsx`
+- `[x]` Criar as páginas específicas por nicho (com foco em SEO, GEO e AEO)
+  - `[x]` Criar `src/pages/Clinicas.tsx`
+  - `[x]` Criar `src/pages/Imobiliarias.tsx`
+  - `[x]` Criar `src/pages/Oficinas.tsx`
+- `[x]` Registrar novas rotas no `src/App.tsx`
+- `[x]` Integrar links das soluções no `src/components/Header.tsx` e `src/components/Footer.tsx`
+- `[x]` Validar a compilação do build

@@ -1,38 +1,44 @@
 # ═══════════════════════════════════════════════════════════════
-# AgentecStar — .htaccess principal
+# AgentecStar — .htaccess principal otimizado
 # ═══════════════════════════════════════════════════════════════
 
-# Define index.html como arquivo padrão (prioridade sobre index.php do WordPress)
+# Define index.html como arquivo padrão
 DirectoryIndex index.html index.php
 
-# ─── HSTS: força HTTPS em todos os subdomínios (Semrush: subdomains sem HSTS) ─
+# ─── HSTS e Cabeçalhos de Segurança ───────────────────────────
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-  # Proteção extra de segurança
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
-# ─── React SPA — redireciona todas as rotas para index.html ───────────────────
+# ─── Redirecionamentos Canônicos 301 e Roteamento SPA ──────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Não redirecionar arquivos reais (js, css, imagens, fontes, etc.)
-  RewriteCond %{REQUEST_FILENAME} !-f
+  # 1. Redirecionar www para non-www (evita duplicidade de domínio)
+  RewriteCond %{HTTP_HOST} ^www\.agentecstar\.com$ [NC]
+  RewriteRule ^(.*)$ https://agentecstar.com/$1 [R=301,L]
 
-  # Exceção: não redirecionar apenas assets estáticos dentro de /blog/
-  RewriteCond %{REQUEST_URI} !^/blog/[^/]+\.(jpg|jpeg|png|gif|webp|svg|ico|pdf)$
-  RewriteCond %{REQUEST_URI} !^/assets/
-  RewriteCond %{REQUEST_URI} !^/lovable-uploads/
+  # 2. Forçar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://agentecstar.com/$1 [R=301,L]
 
-  # Tudo mais vai para o index.html do React (incluindo /blog mesmo sendo pasta física)
+  # 3. Servir arquivos reais diretamente (se o arquivo existir fisicamente)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 4. Caso especial: a pasta física /blog/ não deve bloquear a rota /blog do SPA
+  # Se for requisição para assets estáticos existentes dentro de /blog (imagens), o teste -f acima já atende.
+  # Se for a URL /blog ou /blog/ ou posts, redirecionar para index.html
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# ─── Cache de assets por 1 ano (melhora performance e nota no Google) ─────────
+# ─── Cache de assets (melhora performance e nota no Google) ───
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css                 "access plus 1 year"
@@ -48,7 +54,7 @@ DirectoryIndex index.html index.php
   ExpiresByType application/font-woff2   "access plus 1 year"
 </IfModule>
 
-# ─── Compressão GZIP (melhora velocidade de carregamento) ─────────────────────
+# ─── Compressão GZIP (melhora velocidade de carregamento) ─────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/css

@@ -1,7 +1,9 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { generateAllRoutes } from "@/utils/seo-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import NotFound from "@/pages/NotFound";
 import Services from "@/components/Services";
 import PainPoints from "@/components/PainPoints";
 import Benefits from "@/components/Benefits";
@@ -18,8 +20,8 @@ const SeoLandingPage = () => {
   const routeData = generateAllRoutes().find(r => r.slug === slug);
 
   if (!routeData) {
-    // Se digitarem bobagem, manda pra home
-    return <Navigate to="/" replace />;
+    // Se a rota não existe, exibe 404 real sem redirecionamentos silenciosos
+    return <NotFound />;
   }
 
   // Schema SEO para Negócio Local (injeta dinamicamente o LocalBusiness)
@@ -38,6 +40,12 @@ const SeoLandingPage = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-brand-slate text-slate-200">
+      <SEOHead
+        title={`${routeData.title} | AgentecStar`}
+        description={`Soluções de Inteligência Artificial e automação de atendimento com IA para ${routeData.segment || 'empresas'} em ${routeData.city || 'Campinas e região'}.`}
+        canonical={`https://agentecstar.com/${routeData.slug}`}
+        robots="noindex, follow"
+      />
       <Header />
       
       {/* Hero Dedicado SEO H1 - Imitando a LP Chati9 */}

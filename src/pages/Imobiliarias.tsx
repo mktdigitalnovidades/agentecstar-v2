@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Home, Users, Search, ClipboardCheck, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +9,12 @@ const Imobiliarias = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Automação e Chatbot para Imobiliárias e Corretores | AgentecStar"
+        description="Qualifique leads de imóveis em segundos no WhatsApp, agende visitas e integre com CRM para imobiliárias e corretores de imóveis."
+        canonical="https://agentecstar.com/automacao-para-imobiliarias"
+        robots="index, follow"
+      />
       <Header />
 
       {/* Hero Section */}

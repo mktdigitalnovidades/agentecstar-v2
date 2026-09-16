@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SEOHead from "@/components/SEOHead";
 
 /* Seções above-the-fold: carregam imediatamente */
 import PainPoints from "@/components/PainPoints";
@@ -19,6 +20,12 @@ const Footer       = lazy(() => import("@/components/Footer"));
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-brand-slate text-slate-200">
+      <SEOHead
+        title="AgentecStar – Automação com IA em Campinas | Agentes Inteligentes"
+        description="Desenvolvimento de Agentes de IA em Campinas. Automatize seu WhatsApp e atendimento com a AgentecStar. Consultoria local especializada."
+        canonical="https://agentecstar.com/"
+        robots="index, follow"
+      />
       <Header />
       <Hero />
       <PainPoints />

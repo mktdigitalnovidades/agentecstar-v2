@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Calendar, CheckCircle2, MessageSquare, Clock, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +9,12 @@ const Clinicas = () => {
 
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Automação e Chatbot para Clínicas e Consultórios | AgentecStar"
+        description="Reduza as faltas dos seus pacientes em até 40% com chatbot de confirmação automática e agendamento 24h no WhatsApp para clínicas e consultórios."
+        canonical="https://agentecstar.com/automacao-para-clinicas"
+        robots="index, follow"
+      />
       <Header />
 
       {/* Hero Section da Página */}

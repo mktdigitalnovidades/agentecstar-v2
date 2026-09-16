@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { FileText } from "lucide-react";
 
 const TermosDeUso = () => {
   return (
     <div className="min-h-screen bg-brand-slate text-slate-200 pt-24">
+      <SEOHead
+        title="Termos de Uso | AgentecStar"
+        description="Termos e condições de uso dos serviços e conteúdos do site agentecstar.com."
+        canonical="https://agentecstar.com/termos-de-uso"
+        robots="index, follow"
+      />
       <Header />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">
