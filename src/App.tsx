@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
+import AdSenseManager from "./components/AdSenseManager";
 
 /* Carregamento imediato só para a Home */
 import Index from "./pages/Index";
@@ -44,6 +45,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <WhatsAppButton />
+        <AdSenseManager />
         <Suspense fallback={null}>
           <Routes>
             <Route path="/"                        element={<Index />} />

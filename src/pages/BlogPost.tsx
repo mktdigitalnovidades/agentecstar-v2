@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm"; // Para tabelas e links markdown nativos
 import { ArrowLeft, CalendarDays, Share2, MessageCircle } from "lucide-react";
 import WhatsAppCostCalculator from "@/components/WhatsAppCostCalculator";
+import AdBanner from "@/components/AdBanner";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -193,6 +194,9 @@ const BlogPost = () => {
                    <Share2 className="w-4 h-4" />
                    Enviar no WhatsApp
                 </a>
+
+                <hr className="border-slate-700 my-2" />
+                <AdBanner format="rectangle" className="my-0" />
               </div>
             </aside>
           </div>

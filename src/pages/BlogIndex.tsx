@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { CalendarDays, ArrowRight } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 const BlogIndex = () => {
   const posts = getAllPosts();
@@ -86,6 +87,9 @@ const BlogIndex = () => {
             ))}
           </div>
         )}
+
+        {/* Bloco de anúncio monetizado na listagem do blog */}
+        <AdBanner format="horizontal" className="mt-16 max-w-4xl mx-auto" />
       </div>
 
       <Footer />
