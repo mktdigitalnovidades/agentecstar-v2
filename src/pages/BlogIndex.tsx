@@ -66,7 +66,7 @@ const BlogIndex = () => {
                   <div className="flex items-center gap-2 text-slate-400 text-sm mb-3">
                     <CalendarDays className="w-4 h-4" />
                     <span>
-                      {new Date(post.date).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      {new Date(post.date.includes('T') ? post.date : `${post.date.trim()}T12:00:00`).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
                     </span>
                   </div>
                   

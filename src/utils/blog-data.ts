@@ -18,7 +18,7 @@ export interface BlogPostData {
 
 // Pequeno parser manual para evitar problemas de pollyfill do `gray-matter` no Vite
 function parseFrontmatter(mdxText: string): BlogPostData {
-  const match = mdxText.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const match = mdxText.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   
   const defaultMeta: BlogPostMeta = {
     slug: "",
@@ -35,14 +35,14 @@ function parseFrontmatter(mdxText: string): BlogPostData {
   
   const meta = { ...defaultMeta };
   
-  yamlRaw.split('\n').forEach(line => {
+  yamlRaw.split(/\r?\n/).forEach(line => {
     const colonIdx = line.indexOf(':');
     if (colonIdx > -1) {
       const key = line.slice(0, colonIdx).trim() as keyof BlogPostMeta;
       let valRaw = line.slice(colonIdx + 1).trim();
       
-      // Remove aspas simples e duplas soltas (") ou (')
-      let val = valRaw.replace(/^['"]|['"]$/g, '');
+      // Remove aspas simples e duplas soltas (") ou (') e remove caracteres invisíveis (\r)
+      let val = valRaw.replace(/^['"]|['"]$/g, '').trim();
       
       if (key === 'tags') {
         // [ "tag1", "tag2" ]
@@ -77,8 +77,12 @@ export function getAllPosts(): BlogPostMeta[] {
     posts.push(parsed.meta);
   }
 
-  // Ordena por data mais recente
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Ordena por data mais recente de forma robusta
+  return posts.sort((a, b) => {
+    const timeA = new Date(a.date.trim()).getTime() || 0;
+    const timeB = new Date(b.date.trim()).getTime() || 0;
+    return timeB - timeA;
+  });
 }
 
 export function getPostBySlug(slug: string): BlogPostData | null {

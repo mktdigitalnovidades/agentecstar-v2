@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm"; // Para tabelas e links markdown nativos
 import { ArrowLeft, CalendarDays, Share2, MessageCircle } from "lucide-react";
+import WhatsAppCostCalculator from "@/components/WhatsAppCostCalculator";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -93,7 +94,7 @@ const BlogPost = () => {
       <Header />
       
       <main className="pt-32 pb-20">
-        <article className="container mx-auto px-4 max-w-4xl">
+        <article className="container mx-auto px-4 max-w-5xl">
           {/* Breadcrumb / Botão de Voltar */}
           <Link to="/blog" className="inline-flex items-center gap-2 text-brand-cyan hover:text-white transition-colors mb-8 font-semibold">
             <ArrowLeft className="w-4 h-4" /> Voltar para Artigos
@@ -117,7 +118,7 @@ const BlogPost = () => {
               <div className="flex items-center gap-2">
                 <CalendarDays className="w-5 h-5 text-brand-cyan" />
                 <time dateTime={meta.date}>
-                  {new Date(meta.date).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  {new Date(meta.date.includes('T') ? meta.date : `${meta.date.trim()}T12:00:00`).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </time>
               </div>
               
@@ -158,13 +159,18 @@ const BlogPost = () => {
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {content}
               </ReactMarkdown>
+
+              {/* Calculadora Interativa no Fim do Post de Cobrança do WhatsApp API */}
+              {slug === "nova-cobranca-whatsapp-business-api-meta" && (
+                <WhatsAppCostCalculator />
+              )}
             </div>
 
             {/* Sidebar Sticky de CTA (Para não perder nenhuma venda!) */}
             <aside className="relative">
               <div className="sticky top-32 bg-slate-800/50 backdrop-blur-md border border-brand-cyan/20 p-6 rounded-2xl flex flex-col gap-4 shadow-[0_0_40px_rgba(62,206,208,0.1)]">
                 <h3 className="text-xl font-bold text-white mb-2">Transforme Sua Empresa</h3>
-                <p className="text-sm text-slate-300 mb-4">Gostou das estratégias? Nossos especialistas implementam agentes de IA no seu WhatsApp e Instagram em dias.</p>
+                <p className="text-sm text-slate-300 mb-4">Gostou das estratégias? Nossos especialistas implementam agentes de IA no seu WhatsApp e Instagram em poucos dias.</p>
                 <a 
                   href={contactWhatsApp} 
                   target="_blank" 

@@ -51,7 +51,14 @@ const BlogPreview = () => {
               <div className="p-5 flex flex-col flex-grow">
                 <div className="flex items-center gap-2 text-slate-400 text-xs mb-3">
                   <CalendarDays className="w-3 h-3" />
-                  <span>{new Date(post.date).toLocaleDateString("pt-BR")}</span>
+                  <span>
+                    {(() => {
+                      const cleanDate = post.date?.trim() || "";
+                      const parts = cleanDate.split("-");
+                      if (parts.length === 3) return `${parts[2]}/${parts[1]}/${parts[0]}`;
+                      return new Date(cleanDate).toLocaleDateString("pt-BR");
+                    })()}
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-fuchsia transition-colors line-clamp-3 leading-snug">
                   {post.title}
